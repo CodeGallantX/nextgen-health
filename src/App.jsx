@@ -3,6 +3,7 @@ import Home from "./pages/home"
 import Login from "./pages/login"
 import Signup from "./pages/signup"
 import Verification from "./pages/verification"
+import ForgotPassword from "./pages/forgot-password"
 import AccountSetup from "./pages/AccountSetup"
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
         <Route path='/auth/login' element={<Login />} />
         <Route path='/auth/signup' element={<Signup />} />
         <Route path='/auth/verification' element={<Verification />} />
+        <Route path='/forgot-password' element={<ForgotPassword />} />
         <Route path='/account-setup' element={<AccountSetup />} />
     </Routes>
   )

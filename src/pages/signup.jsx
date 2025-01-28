@@ -164,7 +164,7 @@ const Signup = () => {
             </button>
             <span className="text-sm text-gray-600">
               I agree to the{" "}
-              <a className="text-[#4d80ff] underline"> Terms and Conditions</a>
+              <a href="#" className="text-[#4d80ff] underline"> Terms and Conditions</a>
             </span>
           </div>
           <button
