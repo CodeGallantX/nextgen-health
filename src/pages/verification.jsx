@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Verification = () => {
   const [otp, setOtp] = useState(new Array(6).fill(""));
@@ -48,14 +49,23 @@ const Verification = () => {
   const handleResend = () => {
     setCountdown(30);
     setIsResendDisabled(true);
-    setOtp(new Array(6).fill("")); // Clear OTP inputs
+    setOtp(new Array(6).fill(""));
     console.log("Resend code triggered.");
   };
 
+
+  const navigate = useNavigate();
   const handleVerify = () => {
-    console.log("Entered OTP:", otp.join(""));
-    // Add verification logic here
-  };
+    const otpString = otp.join("");
+    console.log("Entered OTP:", otpString);
+    
+    // Validate OTP (dummy validation logic)
+    if (otpString === "123456") {  
+        navigate('/account-setup');
+    } else {
+        alert("Invalid OTP, please try again.");
+    }
+};
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-6">
