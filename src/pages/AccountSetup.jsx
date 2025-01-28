@@ -102,9 +102,9 @@ const SetupAccountPage = () => {
                     </button>
 
                     {/* Vertical Timeline */}
-                    <div className="relative mb-6">
+                    <div className="flex flex-col items-center mb-6">
                         {[1, 2, 3, 4].map((timelineStep) => (
-                            <div key={timelineStep} className="mb-4 flex items-center">
+                            <div key={timelineStep} className="flex flex-col items-center mb-4">
                                 <div
                                     className={`h-6 w-6 rounded-full flex items-center justify-center border-2 ${step >= timelineStep ? "bg-[#4D80FF] border-[#4D80FF]" : "bg-white border-gray-300"}`}
                                 >
@@ -112,7 +112,7 @@ const SetupAccountPage = () => {
                                 </div>
                                 {timelineStep !== 4 && (
                                     <div
-                                        className={`h-1 w-20 mx-4 ${step > timelineStep ? "bg-[#4D80FF]" : "bg-gray-300"}`}
+                                        className={`h-1 w-20 ${step > timelineStep ? "bg-[#4D80FF]" : "bg-gray-300"}`}
                                     />
                                 )}
                             </div>
