@@ -6,7 +6,7 @@ const Verification = () => {
   const [isResendDisabled, setIsResendDisabled] = useState(true);
   const [countdown, setCountdown] = useState(30);
 
-  const email = "(jo******n.doe@gmail.com)"; // Example email
+  const email = "(jo******n.doe@gmail.com)"; 
 
   useEffect(() => {
     if (countdown > 0) {
@@ -27,7 +27,6 @@ const Verification = () => {
     newOtp[index] = element.value;
     setOtp(newOtp);
 
-    // Focus next box
     if (element.nextSibling) {
       element.nextSibling.focus();
     }
@@ -39,7 +38,6 @@ const Verification = () => {
       newOtp[index] = "";
       setOtp(newOtp);
 
-      // Focus previous box
       if (e.target.previousSibling) {
         e.target.previousSibling.focus();
       }
@@ -59,7 +57,6 @@ const Verification = () => {
     const otpString = otp.join("");
     console.log("Entered OTP:", otpString);
     
-    // Validate OTP (dummy validation logic)
     if (otpString === "123456") {  
         navigate('/account-setup');
     } else {
@@ -68,7 +65,7 @@ const Verification = () => {
 };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-6">
+    <div className="min-h-screen flex flex-col items-center justify-center space-y-6 px-6">
       <div className="w-full max-w-md p-6 bg-white border-1 border-gray-300 rounded-2xl">
         <h1 className="text-2xl font-bold text-[#4D80FF] mb-4 text-center">
           Verify Your Email
@@ -116,14 +113,14 @@ const Verification = () => {
             )}
           </p>
         </div>
-        <div className="mt-6 border-t pt-4 text-center">
-          <p className="text-sm text-gray-600">
-            Can’t verify via email?{" "}
-            <a href="#phone" className="text-blue-500 underline font-medium">
-              Verify by adding your Phone number
-            </a>
-          </p>
         </div>
+        <div className="w-full max-w-md p-6 bg-white border-1 border-gray-300 rounded-2xl">
+          <p className="text-sm text-gray-600">
+            Can’t verify via email?
+          </p>
+            <a href="#phone" className="text-[#4D80FF] text-sm underline font-medium">
+              Verify by adding your phone number
+            </a>
       </div>
     </div>
   );

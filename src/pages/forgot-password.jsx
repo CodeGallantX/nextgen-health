@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaArrowLeft } from "react-icons/fa";
+import { FaChevronLeft } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -8,22 +8,22 @@ const ForgotPasswordPage = () => {
 
     const navigate = useNavigate();
     const handleBackClick = () => {
-        navigate(-1); //
+        navigate(-1); 
     };
 
     return (
         <div className="min-h-screen flex items-start justify-start py-10 px-10">
             <div className="w-full">
                 <div className="flex items-center mb-6">
-                                    <button 
-                                        onClick={handleBackClick} 
-                                        className="bg-slate-400 p-2 rounded-full">
-                                        <FaArrowLeft className="text-white text-lg" />
-                                    </button>
-                                </div>
-                <h2 className="text-5xl font-bold mb-2 text-[#4D80FF]">Forgot your password?</h2>
+                    <button
+                        onClick={handleBackClick}
+                        className="bg-slate-300 p-2 rounded-full">
+                        <FaChevronLeft className="text-white text-lg" />
+                    </button>
+                </div>
+                <h2 className="text-5xl font-bold mb-3 text-[#4D80FF]">Forgot your password?</h2>
                 <p className="text-gray-600 mb-8 ">No worries! Enter the email address you used to register and we'll send you a link to reset your password</p>
-                
+
                 <div className="mb-4">
                     <div className="relative flex items-center">
                         <FaEnvelope className="text-gray-500 absolute left-3 text-gray-400" />

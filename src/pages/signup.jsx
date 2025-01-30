@@ -118,7 +118,7 @@ const Signup = () => {
               <li className="flex items-center">
                 <FaCheckCircle
                   className={`mr-2 ${
-                    passwordConditions.minLength ? "text-green-500" : "text-red-500"
+                    passwordConditions.minLength ? "text-green-500" : "text-gray-300"
                   }`}
                 />
                 At least 8 characters
@@ -126,7 +126,7 @@ const Signup = () => {
               <li className="flex items-center">
                 <FaCheckCircle
                   className={`mr-2 ${
-                    passwordConditions.upperLower ? "text-green-500" : "text-red-500"
+                    passwordConditions.upperLower ? "text-green-500" : "text-gray-300"
                   }`}
                 />
                 At least 1 upper & lowercase letter
@@ -134,7 +134,7 @@ const Signup = () => {
               <li className="flex items-center">
                 <FaCheckCircle
                   className={`mr-2 ${
-                    passwordConditions.numberSpecial ? "text-green-500" : "text-red-500"
+                    passwordConditions.numberSpecial ? "text-green-500" : "text-gray-300"
                   }`}
                 />
                 At least 1 number and special character
@@ -179,10 +179,10 @@ const Signup = () => {
         </form>
       </div>
       <div className="flex flex-row items-center justify-center mt-2 space-x-4">
-        <FaGoogle className="text-2xl text-[#EA4335] cursor-pointer" />
-        <FaFacebookF className="text-2xl text-[#4267B2] cursor-pointer" />
-        <FaApple className="text-2xl text-black cursor-pointer" />
-        <FaMicrosoft className="text-2xl text-[#737373] cursor-pointer" />
+        <FaGoogle className="text-2xl text-gray-400 cursor-pointer" />
+        <FaFacebookF className="text-2xl text-gray-400 cursor-pointer" />
+        <FaApple className="text-2xl text-gray-400 cursor-pointer" />
+        <FaMicrosoft className="text-2xl text-gray-400 cursor-pointer" />
       </div>
       <p className="mt-6 text-sm text-gray-600 text-center">
         Already a member?{" "}

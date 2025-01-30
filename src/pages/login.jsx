@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaEnvelope, FaLock, FaEye, FaEyeSlash, FaArrowLeft } from "react-icons/fa";
+import { FaEnvelope, FaLock, FaEye, FaEyeSlash, FaChevronLeft } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
@@ -13,7 +13,7 @@ const LoginPage = () => {
     };
 
     const handleBackClick = () => {
-        navigate(-1); // Go back to the previous page
+        navigate(-1); 
     };
 
     return (
@@ -23,11 +23,11 @@ const LoginPage = () => {
                     <button 
                         onClick={handleBackClick} 
                         className="bg-slate-400 p-2 rounded-full">
-                        <FaArrowLeft className="text-white text-lg" />
+                        <FaChevronLeft className="text-white text-lg" />
                     </button>
                 </div>
-                <h2 className="text-5xl font-bold mb-2 text-[#4D80FF] w-1/3">Welcome Back!</h2>
-                <p className="text-gray-600 mb-8 w-1/2">Let us continue to help you access the care you deserve</p>
+                <h2 className="text-5xl font-bold mb-2 text-[#4D80FF] w-3/5">Welcome Back!</h2>
+                <p className="text-gray-600 mb-8 w-4/5">Let us continue to help you access the care you deserve</p>
                 
                 <div className="mb-4">
                     <div className="relative flex items-center">
