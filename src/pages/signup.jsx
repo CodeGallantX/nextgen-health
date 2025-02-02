@@ -55,19 +55,19 @@ const Signup = () => {
       navigate('/auth/verification');
     }
   };
-
   return (
-    <div className="px-10 md:px-16 xl:px-28 min-h-screen">
-      <div className="flex flex-col items-start justify-center py-10">
-        <h1 className="text-[#4D80FF] text-5xl font-extrabold mb-2 w-full max-w-sm">
+    <div className="px-10 md:px-16 xl:px-28 min-h-screen md:flex md:flex-col md:items-center md:justify-center md:py-6">
+      <div className="flex flex-col items-start md:items-center justify-center py-10 md:p-10 md:shadow-lg md:rounded-xl md:w-full md:max-w-xl">
+        <h1 className="text-left md:text-center text-[#4D80FF] text-5xl font-extrabold mb-2 w-full max-w-sm md:max-w-full">
           Create your Account
         </h1>
-        <p className="text-left text-gray-600 mb-8">
+        <p className="text-left md:text-center text-gray-600">
           Welcome to NextGen Health
-          <br />
+        </p>
+        <p className="text-left md:text-center text-gray-600 mb-8">
           Register and get the care you deserve
         </p>
-        <form className="w-full max-w-md bg-white space-y-3" onSubmit={handleSubmit}>
+        <form className="w-full max-w-md md:max-w-2xl bg-white space-y-3" onSubmit={handleSubmit}>
           <div className="relative flex items-center">
             <FaUser className="absolute left-3 text-gray-400" />
             <input
@@ -111,7 +111,7 @@ const Signup = () => {
                 }
                 className="absolute right-3 text-gray-400"
               >
-                {formData.passwordVisible ? <FiEyeOff /> : <FiEye />}
+                {formData.passwordVisible ? <FiEye /> : <FiEyeOff />}
               </button>
             </div>
             <ul className="mt-2 space-y-1 text-sm">
@@ -151,6 +151,18 @@ const Signup = () => {
               placeholder="Confirm Password"
               className="w-full pl-10 py-3 bg-gray-100 focus:bg-white focus:border focus:border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4D80FF]"
             />
+            <button
+                type="button"
+                onClick={() =>
+                  setFormData({
+                    ...formData,
+                    passwordVisible: !formData.passwordVisible,
+                  })
+                }
+                className="absolute right-3 text-gray-400"
+              >
+                {formData.passwordVisible ? <FiEye /> : <FiEyeOff />}
+              </button>
           </div>
           <div className="flex items-center space-x-2">
             <button
