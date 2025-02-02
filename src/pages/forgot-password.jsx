@@ -12,9 +12,9 @@ const ForgotPasswordPage = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-start justify-start py-10 px-10">
-            <div className="w-full">
-                <div className="flex items-center mb-6">
+        <div className="px-10 md:px-16 xl:px-28 min-h-screen flex items-start md:items-center justify-start md:items-center py-10">
+            <div className="w-full md:mx-auto md:flex md:flex-col md:p-10 md:max-w-2xl">
+                <div className="flex items-center mb-6 md:hidden">
                     <button
                         onClick={handleBackClick}
                         className="bg-slate-300 p-2 rounded-full">
@@ -22,7 +22,7 @@ const ForgotPasswordPage = () => {
                     </button>
                 </div>
                 <h2 className="text-5xl font-bold mb-3 text-[#4D80FF]">Forgot your password?</h2>
-                <p className="text-gray-600 mb-8 ">No worries! Enter the email address you used to register and we'll send you a link to reset your password</p>
+                <p className="text-gray-600 mb-8 ">No worries! Enter the email address you used to register and we&apos;ll send you a link to reset your password</p>
 
                 <div className="mb-4">
                     <div className="relative flex items-center">
