@@ -58,17 +58,17 @@ const Signup = () => {
   };
   return (
     <div className="px-10 px-16 xl:px-28 min-h-screen flex flex-col items-center justify-center py-6">
-      <div className="flex flex-col items-center justify-center w-full max-w-2xl">
+      <div className="flex flex-col items-center justify-center w-full max-w-3xl">
+        <div className="w-1/5 mb-10" >
+          <img src="/logo.png" alt="logo" className="w-full" />
+        </div>
         <h1 className="text-center text-[#4D80FF] text-5xl font-extrabold mb-2 w-full">
           Create your Account
         </h1>
-        <p className="text-center text-gray-600">
-          Welcome to NextGen Health
+        <p className="text-center text-gray-800">
+          Find accessible health care now
         </p>
-        <p className="text-center text-gray-600 mb-8">
-          Register and get the care you deserve
-        </p>
-        <form className="w-full max-w-2xl bg-white space-y-3" onSubmit={handleSubmit}>
+        <form className="w-full bg-white space-y-3 mt-6" onSubmit={handleSubmit}>
           <div className="relative flex items-center">
             <FaUser className="absolute left-3 text-gray-400" />
             <input
@@ -80,10 +80,9 @@ const Signup = () => {
               className="w-full pl-10 py-3 bg-gray-100 focus:bg-white focus:border focus:border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#4D80FF]"
             />
             <FaCheckCircle
-                  className={`absolute right-3 ${
-                    formData.fullName ? "text-green-500" : "text-gray-300"
-                  }`}
-                />
+              className={`absolute right-3 ${formData.fullName ? "text-green-500" : "text-gray-300"
+                }`}
+            />
           </div>
           <div className="relative flex items-center">
             <FaEnvelope className="absolute left-3 text-gray-400" />
@@ -96,10 +95,9 @@ const Signup = () => {
               className="w-full pl-10 py-3 bg-gray-100 focus:bg-white focus:border focus:border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#4D80FF]"
             />
             <FaCheckCircle
-                  className={`absolute right-3 ${
-                    formData.email ? "text-green-500" : "text-gray-300"
-                  }`}
-                />
+              className={`absolute right-3 ${formData.email ? "text-green-500" : "text-gray-300"
+                }`}
+            />
           </div>
           <div>
             <div className="relative flex items-center">
@@ -128,25 +126,22 @@ const Signup = () => {
             <ul className="mt-2 space-y-1 text-sm">
               <li className="flex items-center">
                 <FaCheckCircle
-                  className={`mr-2 ${
-                    passwordConditions.minLength ? "text-green-500" : "text-gray-300"
-                  }`}
+                  className={`mr-2 ${passwordConditions.minLength ? "text-green-500" : "text-gray-300"
+                    }`}
                 />
                 At least 8 characters
               </li>
               <li className="flex items-center">
                 <FaCheckCircle
-                  className={`mr-2 ${
-                    passwordConditions.upperLower ? "text-green-500" : "text-gray-300"
-                  }`}
+                  className={`mr-2 ${passwordConditions.upperLower ? "text-green-500" : "text-gray-300"
+                    }`}
                 />
                 At least 1 upper & lowercase letter
               </li>
               <li className="flex items-center">
                 <FaCheckCircle
-                  className={`mr-2 ${
-                    passwordConditions.numberSpecial ? "text-green-500" : "text-gray-300"
-                  }`}
+                  className={`mr-2 ${passwordConditions.numberSpecial ? "text-green-500" : "text-gray-300"
+                    }`}
                 />
                 At least 1 number and special character
               </li>
@@ -166,9 +161,8 @@ const Signup = () => {
             <button
               type="button"
               onClick={() => setAgreement(!agreement)}
-              className={`w-5 h-5 rounded-full flex items-center justify-center border ${
-                agreement ? "bg-[#4D80FF] text-white" : "border-gray-300"
-              }`}
+              className={`w-5 h-5 rounded-full flex items-center justify-center border ${agreement ? "bg-[#4D80FF] text-white" : "border-gray-300"
+                }`}
             >
               {agreement && <FaCheckCircle />}
             </button>
@@ -180,20 +174,16 @@ const Signup = () => {
           <button
             type="submit"
             disabled={!isFormValid}
-            className={`w-full py-3 text-white rounded-lg ${
-              isFormValid ? "bg-[#4D80FF]" : "bg-gray-300 cursor-not-allowed"
-            }`}
+            className={`w-full py-3 text-white rounded-lg ${isFormValid ? "bg-[#4D80FF]" : "bg-gray-300 cursor-not-allowed"
+              }`}
           >
             Sign Up
           </button>
         </form>
       </div>
-      <div className="flex flex-row items-center justify-center mt-6 space-x-4">
-        <FaGoogle className="text-2xl text-gray-400 cursor-pointer" />
-        <FaFacebookF className="text-2xl text-gray-400 cursor-pointer" />
-        <FaApple className="text-2xl text-gray-400 cursor-pointer" />
-        <FaMicrosoft className="text-2xl text-gray-400 cursor-pointer" />
-      </div>
+      <p className="mt-4 text-sm italic text-black text-center">
+        By continuing, you agree to <a href="#" className="text-[#4d80ff]">Privacy Policy</a> and <a href="#" className="text-[#4d80ff]">Terms of Use</a>
+      </p>
       <p className="mt-4 text-sm text-gray-600 text-center">
         Already a member?{" "}
         <a href="/auth/login" className="text-[#4D80FF] underline">

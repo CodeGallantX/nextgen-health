@@ -1,10 +1,11 @@
-const NavItem = ({ icon, label }) => (
-    <div
-      className="flex flex-col items-center space-y-6 p-1 rounded-lg cursor-pointer transition"
-    >
-      <div className="text-gray-500 text-xl">{icon}</div>
-      <span className="text-gray-700 text-xs">{label}</span>
-    </div>
-  );
+const NavItem = ({ icon, label, url, colour = "text-gray-500" }) => (
+  <a
+    href={url}
+    className="flex flex-col items-center space-y-2 p-2 rounded-lg cursor-pointer transition hover:bg-gray-100"
+  >
+    <div className={`text-xl ${colour}`}>{icon}</div>
+    <span className={`text-xs font-medium ${colour}`}>{label}</span>
+  </a>
+);
 
-  export default NavItem
+export default NavItem;
