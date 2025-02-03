@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaCaretLeft, FaCaretRight } from "react-icons/fa";
 
-export default function SetupAccount() {
+const SetupAccount = () => {
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }} 
@@ -52,3 +52,5 @@ export default function SetupAccount() {
     </motion.div>
   );
 }
+
+export default SetupAccount;
