@@ -1,68 +1,40 @@
-import { motion } from "framer-motion";
-import { FaSearch, FaRegHandPointer, FaRegSmile } from "react-icons/fa";
+import { FaSearch, FaMicrophone, FaCalendarAlt } from "react-icons/fa";
 
-const Banner = () => (
-  <motion.div
-    initial={{ opacity: 0, y: -30 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6, ease: "easeOut" }}
-    className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 rounded-xl shadow-lg mb-6"
-  >
-    <div className="flex items-center space-x-3">
-      <motion.div
-        initial={{ scale: 0.8 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        className="bg-white p-3 rounded-full"
-      >
-        <FaRegSmile className="text-blue-500 text-2xl" />
-      </motion.div>
-      <motion.h1
-        initial={{ x: -20, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
-        className="text-2xl font-bold"
-      >
-        Hello, New User!
-      </motion.h1>
+const Banner = () => {
+  return (
+    <div className="relative bg-blue-500 text-white px-10 py-20 rounded-xl shadow-lg mb-6 flex flex-col space-y-4 md:flex-row md:items-center md:justify-between">
+      <div className="flex flex-col space-y-2">
+        <div className="flex items-center space-x-3">
+          <h1 className="text-3xl font-bold">
+            Hello, New User!
+          </h1>
+        </div>
+
+        <p className="text-lg">
+          Welcome to <span className="font-semibold">NextGen Health</span>. How may we assist you today?
+        </p>
+
+        <div className="relative mt-3 w-full max-w-lg">
+          <input
+            type="text"
+            placeholder="Search by specialty, procedure, location..."
+            className="w-full p-3 pl-10 pr-12 rounded-xl border border-gray-100 text-gray-200 focus:ring-1 focus:ring-white outline-none"
+          />
+          <FaSearch className="absolute top-4 left-3 text-gray-200" />
+          <FaMicrophone className="absolute top-4 right-3 text-gray-200 cursor-pointer" />
+        </div>
+      </div>
+
+      <div className="hidden md:block">
+        <img src="/banner_doctor.png" alt="Doctor" className="absolute bottom-0 right-0 rounded-lg" />
+      </div>
+
+      <div className="absolute top-10 right-80 bg-violet-600/20 px-4 py-2 rounded-lg flex items-center space-x-2 text-gray-200"      >
+        <FaCalendarAlt />
+        <span>Feb 1, 2025</span>
+      </div>
     </div>
-
-    <motion.p
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.3, duration: 0.5 }}
-      className="mt-2 text-lg"
-    >
-      Welcome to <span className="font-semibold">NextGen Health</span>. How may we assist you today?
-    </motion.p>
-
-    <SearchBar />
-
-    <motion.button
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      className="mt-4 flex items-center space-x-2 bg-white text-blue-500 px-4 py-2 rounded-lg shadow hover:bg-blue-100 transition"
-    >
-      <FaRegHandPointer />
-      <span>Get Assistance</span>
-    </motion.button>
-  </motion.div>
-);
-
-const SearchBar = () => (
-  <motion.div
-    initial={{ opacity: 0, scale: 0.95 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ delay: 0.4, duration: 0.4 }}
-    className="relative mt-4"
-  >
-    <input
-      type="text"
-      placeholder="Search by specialty, procedure, location..."
-      className="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500"
-    />
-    <FaSearch className="absolute top-3 right-3 text-gray-400" />
-  </motion.div>
-);
+  );
+};
 
 export default Banner;

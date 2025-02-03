@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { FaCalendarAlt } from "react-icons/fa";
 
 const AppointmentsSection = () => {
@@ -14,10 +13,7 @@ const AppointmentsSection = () => {
       </div>
 
       <div className="flex flex-col items-center text-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.3 }}
+        <div
           className="flex flex-col items-center"
         >
           <FaCalendarAlt className="text-blue-400 text-5xl mb-2" />
@@ -26,15 +22,14 @@ const AppointmentsSection = () => {
           ) : (
             <p className="text-gray-500">You do not have any appointments scheduled</p>
           )}
-        </motion.div>
+        </div>
 
         {!selectedDate && (
-          <motion.button
-            whileHover={{ scale: 1.05 }}
+          <button
             className="mt-4 bg-blue-500 text-white py-2 px-6 rounded-lg shadow hover:bg-blue-600"
           >
             Schedule an Appointment
-          </motion.button>
+          </button>
         )}
       </div>
 
@@ -42,16 +37,15 @@ const AppointmentsSection = () => {
         <h3 className="text-gray-700 font-medium mb-2">Recommended dates</h3>
         <div className="flex gap-2 flex-wrap">
           {recommendedDates.map((date, index) => (
-            <motion.button
+            <button
               key={index}
-              whileTap={{ scale: 0.95 }}
               onClick={() => setSelectedDate(date)}
               className={`px-4 py-2 rounded-lg border ${
                 selectedDate === date ? "bg-blue-500 text-white" : "bg-white text-gray-700 border-gray-300"
               }`}
             >
               {date}
-            </motion.button>
+            </button>
           ))}
         </div>
       </div>

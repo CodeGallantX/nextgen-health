@@ -8,9 +8,9 @@ import HealthcarePractitioners from "../components/HealthcarePractitioners";
 
 const Dashboard = () => {
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
-      <div className="grid grid-cols-12 gap-6">
-        <aside className="col-span-2 bg-white p-4 rounded-lg shadow-lg">
+    <div className="min-h-screen p-6">
+      <div className="grid grid-cols-11 gap-6">
+        <aside className="col-span-1 bg-white py-10 rounded-2xl border border-gray-200">
           <nav className="space-y-4">
             <NavItem icon={<FaSearch />} label="Search" />
             <NavItem icon={<FaCalendarAlt />} label="Appointments" />
@@ -19,13 +19,13 @@ const Dashboard = () => {
           </nav>
         </aside>
         
-        <main className="col-span-7 bg-white p-6 rounded-lg shadow-lg">
+        <main className="col-span-7 bg-white rounded-lg">
           <Banner />
           <TrendingSearches />
           <ExploreServices />
         </main>
 
-        <aside className="col-span-3 bg-white p-4 rounded-lg shadow-lg">
+        <aside className="col-span-3">
           <AppointmentsSection />
           <HealthcarePractitioners />
         </aside>
