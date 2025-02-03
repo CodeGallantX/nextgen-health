@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'; 
 import { FaStethoscope } from 'react-icons/fa';
 import { FaHeartbeat, FaClipboardCheck, FaAmbulance, FaNotesMedical } from 'react-icons/fa';
 
@@ -11,14 +10,13 @@ const ExploreServices = () => (
         { name: "HMO Assistance", icon: <FaStethoscope /> },
         { name: "Urgent Care", icon: <FaAmbulance /> },
       ].map((service, index) => (
-        <motion.div
+        <div
           key={index}
-          whileHover={{ scale: 1.05 }}
-          className="p-4 bg-gray-100 rounded-lg shadow hover:bg-gray-200 cursor-pointer flex items-center space-x-3"
+          className="p-4 bg-gray-100 rounded-lg hover:bg-gray-200 cursor-pointer flex items-center space-x-3"
         >
-          <div className="text-blue-500 text-xl">{service.icon}</div>
+          <div className="text-[#4D80FF] text-xl">{service.icon}</div>
           <span className="text-gray-700 font-medium">{service.name}</span>
-        </motion.div>
+        </div>
       ))}
     </div>
   );

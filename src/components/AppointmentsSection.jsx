@@ -18,7 +18,7 @@ const AppointmentsSection = () => {
         >
           <FaCalendarAlt className="text-blue-400 text-5xl mb-2" />
           {selectedDate ? (
-            <p className="text-gray-700 text-lg font-medium">Your appointment is on <span className="text-blue-500 font-bold">{selectedDate}</span></p>
+            <p className="text-gray-700 text-lg font-medium">Your appointment is on <span className="text-[#4D80FF] font-bold">{selectedDate}</span></p>
           ) : (
             <p className="text-gray-500">You do not have any appointments scheduled</p>
           )}
@@ -26,7 +26,7 @@ const AppointmentsSection = () => {
 
         {!selectedDate && (
           <button
-            className="mt-4 bg-blue-500 text-white py-2 px-6 rounded-lg shadow hover:bg-blue-600"
+            className="mt-4 bg-[#4D80FF] text-white py-2 px-6 rounded-lg shadow hover:bg-blue-600"
           >
             Schedule an Appointment
           </button>
@@ -41,7 +41,7 @@ const AppointmentsSection = () => {
               key={index}
               onClick={() => setSelectedDate(date)}
               className={`px-4 py-2 rounded-lg border ${
-                selectedDate === date ? "bg-blue-500 text-white" : "bg-white text-gray-700 border-gray-300"
+                selectedDate === date ? "bg-[#4D80FF] text-white" : "bg-white text-gray-700 border-gray-300"
               }`}
             >
               {date}

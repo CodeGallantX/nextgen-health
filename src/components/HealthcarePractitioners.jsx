@@ -28,23 +28,21 @@ const HealthcarePractitioners = () => (
       <h2 className="font-bold text-lg text-gray-800">
         Available Healthcare Practitioners
       </h2>
-      <motion.a
-        whileHover={{ scale: 1.05 }}
-        className="text-blue-500 font-medium flex items-center cursor-pointer"
+      <a
+        className="text-[#4D80FF] font-medium flex items-center cursor-pointer"
       >
         See all ➜
-      </motion.a>
+      </a>
     </div>
 
     <div className="space-y-4">
       {doctors.map((doctor, index) => (
-        <motion.div
+        <div
           key={index}
-          whileHover={{ scale: 1.02 }}
           className="p-4 border rounded-lg shadow-sm cursor-pointer hover:bg-gray-50 flex items-center space-x-4"
         >
           <div className="relative">
-            <FaUserMd className="text-blue-500 text-4xl bg-gray-100 p-3 rounded-full" />
+            <FaUserMd className="text-[#4D80FF] text-4xl bg-gray-100 p-3 rounded-full" />
             <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-lg">
               {doctor.rating} <FaStar/>
             </span>
@@ -52,7 +50,7 @@ const HealthcarePractitioners = () => (
 
           <div className="flex-1">
             <h3 className="text-gray-800 font-semibold">{doctor.name}</h3>
-            <p className="text-blue-500 text-sm">{doctor.specialty}</p>
+            <p className="text-[#4D80FF] text-sm">{doctor.specialty}</p>
             <p className="flex items-center text-gray-600 text-sm">
               <FaMapMarkerAlt className="mr-1" /> {doctor.location}
             </p>
@@ -71,12 +69,12 @@ const HealthcarePractitioners = () => (
           </div>
 
           <div className="flex flex-col items-end">
-            <p className="text-blue-500 font-bold">{doctor.price}</p>
-            <button className="mt-2 bg-blue-500 text-white text-sm px-4 py-2 rounded-lg shadow hover:bg-blue-600">
+            <p className="text-[#4D80FF] font-bold">{doctor.price}</p>
+            <button className="mt-2 bg-[#4D80FF] text-white text-sm px-4 py-2 rounded-lg shadow hover:bg-blue-600">
               Book Appointment
             </button>
           </div>
-        </motion.div>
+        </div>
       ))}
     </div>
   </div>
