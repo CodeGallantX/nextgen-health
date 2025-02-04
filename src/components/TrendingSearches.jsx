@@ -1,7 +1,7 @@
 
 
 const TrendingSearches = () => (
-    <div className="mt-4 space-x-2">
+    <div className="mt-4 space-x-2 py-5 border-b border-b-gray-400/50">
       <h3 className="font-medium inline-block">Trending searches: </h3>
       {["Gynecologists in Isolo", "Diagnosis", "Dentists near me", "Telemedicine"].map((item, index) => (
         <span

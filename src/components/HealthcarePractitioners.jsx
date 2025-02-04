@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { FaUserMd, FaStar, FaMapMarkerAlt } from "react-icons/fa";
 
 const doctors = [
@@ -28,9 +27,7 @@ const HealthcarePractitioners = () => (
       <h2 className="font-bold text-lg text-gray-800">
         Available Healthcare Practitioners
       </h2>
-      <a
-        className="text-[#4D80FF] font-medium flex items-center cursor-pointer"
-      >
+      <a className="text-[#4D80FF] font-medium flex items-center cursor-pointer">
         See all ➜
       </a>
     </div>
@@ -39,15 +36,17 @@ const HealthcarePractitioners = () => (
       {doctors.map((doctor, index) => (
         <div
           key={index}
-          className="p-4 border rounded-lg shadow-sm cursor-pointer hover:bg-gray-50 flex items-center space-x-4"
+          className="p-4 border rounded-lg shadow-sm cursor-pointer hover:bg-gray-50 flex items-center space-x-4 transition-all duration-200"
         >
+          {/* Doctor Icon with Rating */}
           <div className="relative">
             <FaUserMd className="text-[#4D80FF] text-4xl bg-gray-100 p-3 rounded-full" />
-            <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-lg">
-              {doctor.rating} <FaStar/>
+            <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-lg flex items-center">
+              {doctor.rating} <FaStar className="ml-1 text-xs" />
             </span>
           </div>
 
+          {/* Doctor Details */}
           <div className="flex-1">
             <h3 className="text-gray-800 font-semibold">{doctor.name}</h3>
             <p className="text-[#4D80FF] text-sm">{doctor.specialty}</p>
@@ -56,6 +55,7 @@ const HealthcarePractitioners = () => (
             </p>
             <p className="text-gray-500 text-sm">{doctor.experience}</p>
 
+            {/* Tags */}
             <div className="flex flex-wrap gap-2 mt-2">
               {doctor.tags.map((tag, i) => (
                 <span
@@ -68,9 +68,10 @@ const HealthcarePractitioners = () => (
             </div>
           </div>
 
+          {/* Booking Button */}
           <div className="flex flex-col items-end">
             <p className="text-[#4D80FF] font-bold">{doctor.price}</p>
-            <button className="mt-2 bg-[#4D80FF] text-white text-sm px-4 py-2 rounded-lg shadow hover:bg-blue-600">
+            <button className="mt-2 bg-[#4D80FF] text-white text-sm px-4 py-2 rounded-lg shadow hover:bg-blue-600 transition-all">
               Book Appointment
             </button>
           </div>
