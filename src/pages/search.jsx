@@ -6,14 +6,12 @@ import TrendingSearches from "../components/TrendingSearches";
 
 const SearchPage = () => {
     return (
-      <div className="flex min-h-screen grid grid-cols-10">
-        {/* Sidebar */}
-        <aside className="col-span-1 bg-white py-10 rounded-2xl border border-gray-200">
+      <div className="flex min-h-screen grid grid-cols-10 p-6">
+        <aside className="cols-span-1 bg-white py-10 rounded-2xl border border-gray-200">
           <nav className="space-y-4">
-            
             <NavItem icon={<img src="/logo.png" alt="logo" className='w-10'/>} label="" url="#" />
-            <NavItem icon={<FaHospital />} label="Home" url="/" colour="text-blue-400" />
-            <NavItem icon={<FaSearch />} label="Search" url="/search" />
+            <NavItem icon={<FaHospital />} label="Home" url="/dashboard" />
+            <NavItem icon={<FaSearch />} label="Search" url="/search" colour="text-blue-600" />
             <NavItem icon={<FaCalendarAlt />} label="Appointments" url="/appointments" />
             <NavItem icon={<FaBell />} label="Notifications"url="#" />
             <NavItem icon={<FaCog />} label="Settings" url="/settings"/>
@@ -24,7 +22,6 @@ const SearchPage = () => {
           </nav>
         </aside>
   
-        {/* Main Content */}
         <main className="flex-1 p-6 col-span-7">
           <h2 className="text-2xl font-bold text-[#4D80FF]">Search</h2>
           <p className="text-sm text-gray-500">Find medical care, compare costs, and manage appointments.</p>

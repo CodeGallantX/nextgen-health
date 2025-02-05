@@ -15,7 +15,7 @@ const Dashboard = () => {
           <nav className="space-y-4">
             
             <NavItem icon={<img src="/logo.png" alt="logo" className='w-10'/>} label="" url="#" />
-            <NavItem icon={<FaHospital />} label="Home" url="/" colour="text-blue-400" />
+            <NavItem icon={<FaHospital />} label="Home" url="/dashboard" colour="text-blue-400" />
             <NavItem icon={<FaSearch />} label="Search" url="/search" />
             <NavItem icon={<FaCalendarAlt />} label="Appointments" url="/appointments" />
             <NavItem icon={<FaBell />} label="Notifications"url="#" />

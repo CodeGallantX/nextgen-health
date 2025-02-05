@@ -9,7 +9,7 @@ const DoctorDetails = () => {
           <nav className="space-y-4">
             
             <NavItem icon={<img src="/logo.png" alt="logo" className='w-10'/>} label="" url="#" />
-            <NavItem icon={<FaHospital />} label="Home" url="/" colour="text-blue-400" />
+            <NavItem icon={<FaHospital />} label="Home" url="/dashboard" colour="text-blue-400" />
             <NavItem icon={<FaSearch />} label="Search" url="/search" />
             <NavItem icon={<FaCalendarAlt />} label="Appointments" url="/appointments" />
             <NavItem icon={<FaBell />} label="Notifications"url="#" />
@@ -21,7 +21,6 @@ const DoctorDetails = () => {
           </nav>
         </aside>
       <div className="col-span-7 bg-white p-6 rounded-lg shadow-md">
-        {/* Header */}
         <div className="flex items-center gap-4">
           <img
             src="/doctor-image.jpg"
@@ -35,29 +34,26 @@ const DoctorDetails = () => {
           </div>
         </div>
 
-        {/* Stats */}
-        <div className="flex gap-6 mt-4 text-gray-700">
+        <div className="flex gap-6 mt-4 text-gray-700 text-2xl space-x-4">
           <p>⭐ 5.0 Rating</p>
           <p>📅 6 years Experience</p>
           <p>👥 200+ Patients</p>
           <p>📝 20+ Reviews</p>
         </div>
 
-        {/* Book Appointment */}
         <div className="mt-4">
           <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
             Book Appointment
           </button>
         </div>
 
-        {/* Recommended Doctors Section */}
         <div className="mt-6">
           <h3 className="text-lg font-semibold mb-2">Based on your Searches</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[1, 2, 3, 4].map((doctor) => (
               <div key={doctor} className="p-4 bg-gray-50 rounded-lg shadow">
                 <img
-                  src="/doctor-placeholder.jpg"
+                  src="/doctor.png"
                   alt="Doctor"
                   className="w-full h-32 object-cover rounded-md"
                 />

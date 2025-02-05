@@ -6,7 +6,7 @@ const Banner = () => {
       <div className="flex flex-col space-y-2">
         <div className="flex items-center space-x-3">
           <h1 className="text-3xl font-bold">
-            Hello, New User!
+            Hello, Hannah!
           </h1>
         </div>
 

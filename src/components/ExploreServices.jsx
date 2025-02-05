@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { FaStethoscope, FaHeartbeat, FaClipboardCheck, FaAmbulance, FaNotesMedical } from "react-icons/fa";
 
 const services = [
@@ -14,10 +13,8 @@ const ExploreServices = () => {
     <div className="overflow-hidden py-5 border-b border-b-gray-400/50 ">
       <h2 className="font-bold text-gray-800 text-lg mb-4">Explore Services</h2>
 
-      <motion.div
+      <div
         className="flex space-x-4 cursor-grab active:cursor-grabbing w-max py-4"
-        drag="x"
-        dragConstraints={{ left: -500, right: 0 }}
       >
         {services.map((service, index) => (
           <div
@@ -28,7 +25,7 @@ const ExploreServices = () => {
             <span className="text-gray-700 font-medium text-sm">{service.name}</span>
           </div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 };
