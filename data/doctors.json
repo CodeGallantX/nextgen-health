@@ -1,0 +1,49 @@
+[
+    {
+      "name": "Dr. Mimi-Stephanie Oni",
+      "specialty": "Intensive Care Unit",
+      "location": "Ikorodu, LA",
+      "hospital": "New Gate Hospital, LA",
+      "rating": "5.0",
+      "experience": "6yrs",
+      "patients": "200+",
+      "reviews": "20+",
+      "about": "Healthcare should be simple, transparent, and accessible to everyone. I believe technology can transform how we experience healthcare. My mission is to make it easier for you to connect with the care you deserve—on your terms.",
+      "skills": [
+        "Patient Assessment & Management",
+        "Critical Procedures",
+        "Trauma Care",
+        "Post-Surgical ICU Care",
+        "Cardiovascular Support",
+        "Respiratory Management"
+      ],
+      "working_hours": "7 AM - 6PM (excluding emergencies)",
+      "languages": ["English (UK)", "Yoruba"],
+      "price": "8k/hr",
+      "consultation_type": "Virtual/Onsite",
+      "img": "/dr_mimi_stephanie.png"
+    },
+    {
+      "name": "Dr. Ifeanyi Charles",
+      "specialty": "Pediatrics",
+      "location": "Umuahia, AB",
+      "hospital": "City Medical Centre, AB",
+      "rating": "4.92",
+      "experience": "15yrs",
+      "patients": "500+",
+      "reviews": "50+",
+      "about": "I am passionate about children's health, ensuring they receive the best medical care. I prioritize personalized treatment and parental guidance.",
+      "skills": [
+        "Neonatal Care",
+        "Child Nutrition",
+        "Immunization Programs",
+        "Developmental Screening"
+      ],
+      "working_hours": "8 AM - 5PM",
+      "languages": ["English (US)", "Igbo"],
+      "price": "10k/hr",
+      "consultation_type": "Onsite Only",
+      "img": "/dr_ifeanyi_charles.png"
+    }
+  ]
+  

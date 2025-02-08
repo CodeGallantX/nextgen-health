@@ -7,6 +7,7 @@ import ForgotPassword from "./pages/forgot-password"
 import AccountSetup from "./pages/AccountSetup"
 import Dashboard from "./pages/dashboard"
 import Search from "./pages/search"
+import Appointment from "./pages/Appointment"
 import Doctor from "./pages/doctor"
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         <Route path='/account-setup' element={<AccountSetup />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/search' element={<Search />} />
+        <Route path='/appointment' element={<Appointment />} />
         <Route path='/doctor' element={<Doctor />} />
     </Routes>
   )
