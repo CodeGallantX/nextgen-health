@@ -9,7 +9,7 @@ import HealthcarePractitioners from "../components/HealthcarePractitioners";
 
 const Dashboard = () => {
   return (
-    <div className="min-h-screen p-6">
+    <div className="min-h-screen p-6 overflow-hidden">
       <div className="grid grid-cols-11 gap-6">
         <aside className="col-span-1 bg-white py-10 rounded-2xl border border-gray-200">
           <nav className="space-y-4">
@@ -22,8 +22,8 @@ const Dashboard = () => {
             <NavItem icon={<FaCog />} label="Settings" url="/settings"/>
           </nav>
           <nav className="mt-20 space-y-4">
-            <NavItem icon={<FaUser />} label="Profile" url="/profile"/>
             <NavItem icon={<FaHeartbeat />} label="Help" url="/help"/>
+            <NavItem icon={<FaUser />} label="Profile" url="/profile"/>
           </nav>
         </aside>
         
@@ -33,7 +33,7 @@ const Dashboard = () => {
           <ExploreServices />
         </main>
 
-        <aside className="col-span-3">
+        <aside className="col-span-3 ">
           <AppointmentsSection />
           <HealthcarePractitioners />
         </aside>

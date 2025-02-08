@@ -14,7 +14,7 @@ const SearchPage = () => {
   }, []);
 
   return (
-    <div className="flex min-h-screen grid lg:grid-cols-10 p-6 gap-4">
+    <div className="flex min-h-screen grid lg:grid-cols-11 p-6 gap-4">
       <aside className="hidden lg:block cols-span-1 bg-white py-10 rounded-2xl border border-gray-200">
         <nav className="space-y-4">
           <NavItem icon={<img src="/logo.png" alt="logo" className="w-10" />} label="" url="#" />
@@ -25,50 +25,59 @@ const SearchPage = () => {
           <NavItem icon={<FaCog />} label="Settings" url="/settings" />
         </nav>
         <nav className="mt-20 space-y-4">
-          <NavItem icon={<FaUser />} label="Profile" url="/profile" />
           <NavItem icon={<FaHeartbeat />} label="Help" url="/help" />
+          <NavItem icon={<FaUser />} label="Profile" url="/profile" />
         </nav>
       </aside>
 
-      <main className={`p-6 ${selectedDoctor ? "lg:col-span-6" : "lg:col-span-9"} flex-1`}>
-        <h2 className="text-2xl font-bold text-[#4D80FF]">Search</h2>
-        <p className="text-sm text-gray-500">Find medical care, compare costs, and manage appointments.</p>
+      <main className={`px-6 pt-0 pb-6 ${selectedDoctor ? "lg:col-span-7" : "lg:col-span-10"} flex-1`}>
+        <h2 className="text-3xl font-bold text-[#4D80FF]">Search</h2>
+        <p className="text-gray-500">Find medical care, compare costs, and manage appointments.</p>
 
-        {/* Doctor Cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {doctors.map((doctor, index) => (
             <div
               key={index}
-              className="p-4 bg-white rounded-lg shadow-md cursor-pointer hover:shadow-lg transition-all"
+              className="p-6 bg-white rounded-lg shadow-md cursor-pointer hover:shadow-lg transition-all"
               onClick={() => setSelectedDoctor(doctor)}
             >
-              <img src={doctor.img} alt={doctor.name} className="w-full h-40 object-cover rounded" />
-              <h3 className="mt-2 font-bold">{doctor.name}</h3>
-              <p className="text-sm text-gray-500">{doctor.specialty}</p>
-              <p className="text-xs text-gray-500"><FaMapMarkerAlt className="inline mr-1" /> {doctor.location}</p>
-              <p className="text-xs text-gray-500">{doctor.experience} Experience</p>
-              <p className="mt-2 font-bold text-[#4D80FF]">{doctor.price}</p>
-              <button className="mt-3 w-full bg-[#4D80FF] text-white py-2 rounded-md">Book now</button>
+              <div className="h-40">
+                <img src={doctor.img} alt={doctor.name} className="w-full object-cover rounded" />
+              </div>
+              <div className="flex flex-col items-start justify-center text-center">
+                <h3 className="mt-2 font-bold text-xl">{doctor.name}</h3>
+                <p className="text-sm text-gray-500 text-lg">{doctor.specialty}</p>
+                <p className="text-xs text-gray-500"><FaMapMarkerAlt className="inline mr-1" /> {doctor.location}</p>
+                <p className="text-xs text-gray-500">{doctor.experience} Experience</p>
+                <p className="mt-2 font-bold text-[#4D80FF]">{doctor.price}</p>
+                <a href="/appointment" className="mt-3 w-full bg-[#4D80FF] text-white py-2 rounded-md w-full">Book now</a>
+              </div>
             </div>
           ))}
         </div>
       </main>
 
       {selectedDoctor && (
-        <aside className="w-full lg:w-auto bg-white p-6 border-l border-gray-200 col-span-3 rounded-lg">
-          <button className="text-red-500 float-right" onClick={() => setSelectedDoctor(null)}><FaTimes /></button>
-          <div className="text-center">
-            <img src={selectedDoctor.img} alt={selectedDoctor.name} className="w-32 h-32 mx-auto rounded-full" />
-            <h3 className="mt-2 text-xl font-bold">{selectedDoctor.name}</h3>
-            <p className="text-sm text-gray-500">{selectedDoctor.specialty}</p>
-            <p className="text-xs text-gray-500"><FaMapMarkerAlt className="inline mr-1" /> {selectedDoctor.location}</p>
-            <p className="text-xs text-gray-500"><FaHospital className="inline mr-1" /> {selectedDoctor.hospital}</p>
-            <p className="text-xs text-gray-500">{selectedDoctor.experience} Experience</p>
+        <aside className="w-full lg:w-auto bg-blue-50 p-6 border border-gray-200 col-span-3 rounded-lg">
+          <button className="absolute top-2 right-4 text-gray-500 bg-gray-200 text-lg p-2 rounded-full" onClick={() => setSelectedDoctor(null)}><FaTimes /></button>
+          <div>
+            <div className="flex flex-row items-center justify-center">
+              <div className="w-32 h-32">
+                <img src={selectedDoctor.img} alt={selectedDoctor.name} className="w-full h-full object-cover rounded-lg" />
+              </div>
+              <div className="flex flex-col items-start justify-center space-y-1 text-gray-500">
+                <h3 className="text-xl font-bold">{selectedDoctor.name}</h3>
+                <p>{selectedDoctor.specialty}</p>
+                <p><FaMapMarkerAlt className="inline mr-1" />{selectedDoctor.location}</p>
+                <p><FaHospital className="inline mr-1" />{selectedDoctor.hospital}</p>
+              </div>
+            </div>
 
-            <div className="flex justify-around mt-4 text-sm">
-              <div><strong>⭐ {selectedDoctor.rating}</strong> Rating</div>
-              <div><strong>{selectedDoctor.patients}</strong> Patients</div>
-              <div><strong>{selectedDoctor.reviews}</strong> Reviews</div>
+            <div className=" bg-gray-50 flex justify-around mt-4 text-sm">
+              <div className='p-2 rounded-lg text-gray-500'><strong className="text-blue-500 text-xl">⭐ {selectedDoctor.rating}</strong> Rating</div>
+              <div className='p-2 rounded-lg text-gray-500'><strong className="text-blue-500 text-xl">{selectedDoctor.experience}</strong> Rating</div>
+              <div className="p-2 rounded-lg text-gray-600"><strong className="text-blue-500 text-xl">{selectedDoctor.patients}</strong> Patients</div>
+              <div className="p-2 rounded-lg text-gray-600"><strong className="text-blue-500 text-xl">{selectedDoctor.reviews}</strong> Reviews</div>
             </div>
 
             <p className="mt-4 text-gray-600">{selectedDoctor.about}</p>

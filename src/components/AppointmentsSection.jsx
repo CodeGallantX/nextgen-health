@@ -6,7 +6,7 @@ const AppointmentsSection = () => {
   const recommendedDates = ["Feb 02", "Feb 03", "Feb 04", "Feb 05", "Feb 06", "Feb 07"];
 
   return (
-    <div className="p-6 bg-gray-100 rounded-xl shadow-lg">
+    <div className="p-6 bg-gray-100 rounded-xl">
       <div className="flex justify-between items-center mb-4">
         <h2 className="font-bold text-lg text-gray-800">Your Appointments</h2>
         <FaCalendarAlt className="text-gray-500 text-lg" />

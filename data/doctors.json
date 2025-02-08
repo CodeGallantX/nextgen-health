@@ -44,6 +44,72 @@
       "price": "10k/hr",
       "consultation_type": "Onsite Only",
       "img": "/dr_ifeanyi_charles.png"
+    },
+    {
+      "name": "Dr. Ifeanyi Charles",
+      "specialty": "Pediatrics",
+      "location": "Umuahia, AB",
+      "hospital": "City Medical Centre, AB",
+      "rating": "4.92",
+      "experience": "15yrs",
+      "patients": "500+",
+      "reviews": "50+",
+      "about": "I am passionate about children's health, ensuring they receive the best medical care. I prioritize personalized treatment and parental guidance.",
+      "skills": [
+        "Neonatal Care",
+        "Child Nutrition",
+        "Immunization Programs",
+        "Developmental Screening"
+      ],
+      "working_hours": "8 AM - 5PM",
+      "languages": ["English (US)", "Igbo"],
+      "price": "10k/hr",
+      "consultation_type": "Onsite Only",
+      "img": "/dr_ifeanyi_charles.png"
+    },
+    {
+      "name": "Dr. Ifeanyi Charles",
+      "specialty": "Pediatrics",
+      "location": "Umuahia, AB",
+      "hospital": "City Medical Centre, AB",
+      "rating": "4.92",
+      "experience": "15yrs",
+      "patients": "500+",
+      "reviews": "50+",
+      "about": "I am passionate about children's health, ensuring they receive the best medical care. I prioritize personalized treatment and parental guidance.",
+      "skills": [
+        "Neonatal Care",
+        "Child Nutrition",
+        "Immunization Programs",
+        "Developmental Screening"
+      ],
+      "working_hours": "8 AM - 5PM",
+      "languages": ["English (US)", "Igbo"],
+      "price": "10k/hr",
+      "consultation_type": "Onsite Only",
+      "img": "/dr_ifeanyi_charles.png"
+    },
+    {
+      "name": "Dr. Ifeanyi Charles",
+      "specialty": "Pediatrics",
+      "location": "Umuahia, AB",
+      "hospital": "City Medical Centre, AB",
+      "rating": "4.92",
+      "experience": "15yrs",
+      "patients": "500+",
+      "reviews": "50+",
+      "about": "I am passionate about children's health, ensuring they receive the best medical care. I prioritize personalized treatment and parental guidance.",
+      "skills": [
+        "Neonatal Care",
+        "Child Nutrition",
+        "Immunization Programs",
+        "Developmental Screening"
+      ],
+      "working_hours": "8 AM - 5PM",
+      "languages": ["English (US)", "Igbo"],
+      "price": "10k/hr",
+      "consultation_type": "Onsite Only",
+      "img": "/dr_ifeanyi_charles.png"
     }
   ]
   
