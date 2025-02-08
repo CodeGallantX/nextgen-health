@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
-import { FaHospital, FaMapMarkerAlt, FaClock, FaLanguage, FaTimes, FaSearch, FaCalendarAlt, FaBell, FaCog, FaUser, FaHeartbeat } from "react-icons/fa";
-import NavItem from "../components/NavItem";
+import { FaHospital, FaMapMarkerAlt, FaClock, FaLanguage, FaTimes } from "react-icons/fa";
+import NavBar from "../components/NavBar";
 
 const SearchPage = () => {
   const [doctors, setDoctors] = useState([]);
   const [selectedDoctor, setSelectedDoctor] = useState(null);
 
-  // Fetch doctor data from JSON
   useEffect(() => {
     fetch("/data/doctors.json")
       .then(response => response.json())
@@ -15,20 +14,7 @@ const SearchPage = () => {
 
   return (
     <div className="flex min-h-screen grid lg:grid-cols-11 p-6 gap-4">
-      <aside className="hidden lg:block cols-span-1 bg-white py-10 rounded-2xl border border-gray-200">
-        <nav className="space-y-4">
-          <NavItem icon={<img src="/logo.png" alt="logo" className="w-10" />} label="" url="#" />
-          <NavItem icon={<FaHospital />} label="Home" url="/dashboard" />
-          <NavItem icon={<FaSearch />} label="Search" url="/search" colour="text-blue-600" />
-          <NavItem icon={<FaCalendarAlt />} label="Appointments" url="/appointments" />
-          <NavItem icon={<FaBell />} label="Notifications" url="#" />
-          <NavItem icon={<FaCog />} label="Settings" url="/settings" />
-        </nav>
-        <nav className="mt-20 space-y-4">
-          <NavItem icon={<FaHeartbeat />} label="Help" url="/help" />
-          <NavItem icon={<FaUser />} label="Profile" url="/profile" />
-        </nav>
-      </aside>
+      <NavBar />
 
       <main className={`px-6 pt-0 pb-6 ${selectedDoctor ? "lg:col-span-7" : "lg:col-span-10"} flex-1`}>
         <h2 className="text-3xl font-bold text-[#4D80FF]">Search</h2>
