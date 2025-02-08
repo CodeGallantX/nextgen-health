@@ -3,11 +3,11 @@ import { FaHospital, FaMapMarkerAlt, FaClock, FaLanguage, FaTimes } from "react-
 import { FaStar } from "react-icons/fa6";
 import NavBar from "../components/NavBar";
 import HealthcarePractitioners from "../components/HealthcarePractitioners";
-import TrendingSearches from "../components/TrendingSearches"
 
 const SearchPage = () => {
   const [doctors, setDoctors] = useState([]);
   const [selectedDoctor, setSelectedDoctor] = useState(null);
+  const [showFilters, setShowFilters] = useState(false);
 
   useEffect(() => {
     fetch("/data/doctors.json")
@@ -16,13 +16,86 @@ const SearchPage = () => {
   }, []);
 
   return (
-    <div className="flex min-h-screen p-6 gap-4">
+    <div className="flex min-h-screen p-6 gap-0">
       <NavBar />
 
       <main className="px-6 pt-0 pb-6 w-full">
-        <h2 className="text-3xl font-bold text-[#4D80FF]">Search</h2>
-        <p className="text-gray-500">Find medical care, compare costs, and manage appointments.</p>
-        <TrendingSearches />
+        <div className="p-6 bg-white rounded-lg shadow">
+          <h2 className="text-3xl font-bold text-[#4D80FF]">Search</h2>
+          <p className="text-gray-500">Find medical care, compare costs, and manage appointments.</p>
+
+          <div className="mt-4 flex gap-2">
+            <input
+              type="text"
+              placeholder="Search procedure or keyword"
+              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400"
+            />
+            <input
+              type="text"
+              placeholder="Location"
+              className="w-1/3 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400"
+            />
+            <button className="bg-[#4D80FF] text-white px-6 py-2 rounded-lg">Search</button>
+          </div>
+
+          <div className="mt-4 flex gap-2">
+            {["All", "Neurology", "Dermatology", "Pharmacy", "Gynaecology", "Obstetrics"].map((tag, index) => (
+              <button
+                key={index}
+                className={`px-4 py-2 rounded-lg ${tag === "All" ? "bg-[#4D80FF] text-white" : "bg-gray-100 text-gray-600"
+                  }`}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+
+          {/* Filters & Sorting */}
+          <div className="mt-4 flex justify-between items-center">
+            <div className="flex gap-4">
+              {/* Filter Toggle Button */}
+              <button
+                className="flex items-center gap-2 px-4 py-2 border rounded-lg"
+                onClick={() => setShowFilters(!showFilters)}
+              >
+                <span>🔍 Filter</span>
+              </button>
+
+              <span className="text-gray-500">500+ Results</span>
+            </div>
+
+            {/* Sorting Dropdown */}
+            <div>
+              <select className="px-4 py-2 border rounded-lg">
+                <option>Recommended</option>
+                <option>Lowest Price</option>
+                <option>Highest Rated</option>
+              </select>
+            </div>
+          </div>
+
+          {/* Filters Dropdown (Only Visible When Clicked) */}
+          {showFilters && (
+            <div className="mt-4 p-4 border rounded-lg bg-gray-50 shadow-lg">
+              <h3 className="font-semibold text-gray-600">Filter by:</h3>
+              <div className="mt-2 flex gap-4">
+                <select className="w-1/2 px-4 py-2 border rounded-lg">
+                  <option>Specialty</option>
+                  <option>Cardiology</option>
+                  <option>Neurology</option>
+                  <option>Orthopedics</option>
+                </select>
+
+                <select className="w-1/2 px-4 py-2 border rounded-lg">
+                  <option>Condition</option>
+                  <option>Diabetes</option>
+                  <option>Hypertension</option>
+                  <option>Arthritis</option>
+                </select>
+              </div>
+            </div>
+          )}
+        </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {doctors.map((doctor, index) => (
@@ -60,9 +133,9 @@ const SearchPage = () => {
           ))}
         </div>
       </main>
-      <aside className={`${selectedDoctor ? "hidden": "block"} `}>
-          <HealthcarePractitioners />
-        </aside>
+      <aside className={`w-5/12 ${selectedDoctor ? "hidden" : "block"} `}>
+        <HealthcarePractitioners />
+      </aside>
       {selectedDoctor && (
         <aside className="w-4/12 bg-blue-50 p-6 border border-gray-200 rounded-lg">
           <button className="absolute top-2 right-4 text-gray-500 bg-gray-200 text-lg p-2 rounded-full" onClick={() => setSelectedDoctor(null)}><FaTimes /></button>
@@ -80,7 +153,7 @@ const SearchPage = () => {
             </div>
 
             <div className=" bg-white flex flex-row items-center justify-center mt-4 text-sm rounded-lg p-4">
-              <div className='p-2 rounded-lg text-gray-500'><strong className="text-blue-500 text-xl"><FaStar className="mr-1 inline-block"/> {selectedDoctor.rating}</strong> Rating</div>
+              <div className='p-2 rounded-lg text-gray-500'><strong className="text-blue-500 text-xl"><FaStar className="mr-1 inline-block" /> {selectedDoctor.rating}</strong> Rating</div>
               <div className='p-2 rounded-lg text-gray-500'><strong className="text-blue-500 text-xl">{selectedDoctor.experience}</strong> Rating</div>
               <div className="p-2 rounded-lg text-gray-600"><strong className="text-blue-500 text-xl">{selectedDoctor.patients}</strong> Patients</div>
               <div className="p-2 rounded-lg text-gray-600"><strong className="text-blue-500 text-xl">{selectedDoctor.reviews}</strong> Reviews</div>

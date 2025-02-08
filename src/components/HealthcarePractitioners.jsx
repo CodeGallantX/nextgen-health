@@ -42,7 +42,7 @@ const HealthcarePractitioners = () => {
     <div className="mt-6 p-6 bg-white rounded-xl">
       <div className="flex justify-between items-center mb-4">
         <h2 className="font-bold text-lg text-gray-800">
-          Available Healthcare Practitioners
+          Based on your location
         </h2>
         <a className="text-[#4D80FF] text-sm font-medium flex items-center cursor-pointer">
           See all ➜
