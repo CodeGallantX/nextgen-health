@@ -3,17 +3,20 @@ import { FaHospital, FaMapMarkerAlt, FaClock, FaLanguage, FaTimes } from "react-
 import { FaStar } from "react-icons/fa6";
 import NavBar from "../components/NavBar";
 import HealthcarePractitioners from "../components/HealthcarePractitioners";
+import doctors from "../../data/doctors.json"
 
 const SearchPage = () => {
-  const [doctors, setDoctors] = useState([]);
   const [selectedDoctor, setSelectedDoctor] = useState(null);
   const [showFilters, setShowFilters] = useState(false);
 
-  useEffect(() => {
-    fetch("/data/doctors.json")
-      .then(response => response.json())
-      .then(data => setDoctors(data));
-  }, []);
+  fetch("/data/doctors.json")
+  .then(response => response.text()) 
+  .then(data => {
+    console.log(data); 
+    return JSON.parse(data);
+  })
+  .catch(error => console.error("Error:", error));
+
 
   return (
     <div className="flex min-h-screen p-6 gap-0">
