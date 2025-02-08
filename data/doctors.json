@@ -1,115 +1,111 @@
 [
-    {
-      "name": "Dr. Mimi-Stephanie Oni",
-      "specialty": "Intensive Care Unit",
-      "location": "Ikorodu, LA",
-      "hospital": "New Gate Hospital, LA",
-      "rating": "5.0",
-      "experience": "6yrs",
-      "patients": "200+",
-      "reviews": "20+",
-      "about": "Healthcare should be simple, transparent, and accessible to everyone. I believe technology can transform how we experience healthcare. My mission is to make it easier for you to connect with the care you deserve—on your terms.",
-      "skills": [
-        "Patient Assessment & Management",
-        "Critical Procedures",
-        "Trauma Care",
-        "Post-Surgical ICU Care",
-        "Cardiovascular Support",
-        "Respiratory Management"
-      ],
-      "working_hours": "7 AM - 6PM (excluding emergencies)",
-      "languages": ["English (UK)", "Yoruba"],
-      "price": "8k/hr",
-      "consultation_type": "Virtual/Onsite",
-      "img": "/dr_mimi_stephanie.png"
-    },
-    {
-      "name": "Dr. Ifeanyi Charles",
-      "specialty": "Pediatrics",
-      "location": "Umuahia, AB",
-      "hospital": "City Medical Centre, AB",
-      "rating": "4.92",
-      "experience": "15yrs",
-      "patients": "500+",
-      "reviews": "50+",
-      "about": "I am passionate about children's health, ensuring they receive the best medical care. I prioritize personalized treatment and parental guidance.",
-      "skills": [
-        "Neonatal Care",
-        "Child Nutrition",
-        "Immunization Programs",
-        "Developmental Screening"
-      ],
-      "working_hours": "8 AM - 5PM",
-      "languages": ["English (US)", "Igbo"],
-      "price": "10k/hr",
-      "consultation_type": "Onsite Only",
-      "img": "/dr_ifeanyi_charles.png"
-    },
-    {
-      "name": "Dr. Ifeanyi Charles",
-      "specialty": "Pediatrics",
-      "location": "Umuahia, AB",
-      "hospital": "City Medical Centre, AB",
-      "rating": "4.92",
-      "experience": "15yrs",
-      "patients": "500+",
-      "reviews": "50+",
-      "about": "I am passionate about children's health, ensuring they receive the best medical care. I prioritize personalized treatment and parental guidance.",
-      "skills": [
-        "Neonatal Care",
-        "Child Nutrition",
-        "Immunization Programs",
-        "Developmental Screening"
-      ],
-      "working_hours": "8 AM - 5PM",
-      "languages": ["English (US)", "Igbo"],
-      "price": "10k/hr",
-      "consultation_type": "Onsite Only",
-      "img": "/dr_ifeanyi_charles.png"
-    },
-    {
-      "name": "Dr. Ifeanyi Charles",
-      "specialty": "Pediatrics",
-      "location": "Umuahia, AB",
-      "hospital": "City Medical Centre, AB",
-      "rating": "4.92",
-      "experience": "15yrs",
-      "patients": "500+",
-      "reviews": "50+",
-      "about": "I am passionate about children's health, ensuring they receive the best medical care. I prioritize personalized treatment and parental guidance.",
-      "skills": [
-        "Neonatal Care",
-        "Child Nutrition",
-        "Immunization Programs",
-        "Developmental Screening"
-      ],
-      "working_hours": "8 AM - 5PM",
-      "languages": ["English (US)", "Igbo"],
-      "price": "10k/hr",
-      "consultation_type": "Onsite Only",
-      "img": "/dr_ifeanyi_charles.png"
-    },
-    {
-      "name": "Dr. Ifeanyi Charles",
-      "specialty": "Pediatrics",
-      "location": "Umuahia, AB",
-      "hospital": "City Medical Centre, AB",
-      "rating": "4.92",
-      "experience": "15yrs",
-      "patients": "500+",
-      "reviews": "50+",
-      "about": "I am passionate about children's health, ensuring they receive the best medical care. I prioritize personalized treatment and parental guidance.",
-      "skills": [
-        "Neonatal Care",
-        "Child Nutrition",
-        "Immunization Programs",
-        "Developmental Screening"
-      ],
-      "working_hours": "8 AM - 5PM",
-      "languages": ["English (US)", "Igbo"],
-      "price": "10k/hr",
-      "consultation_type": "Onsite Only",
-      "img": "/dr_ifeanyi_charles.png"
-    }
-  ]
-  
+  {
+    "name": "Dr. Mimi-Stephanie Oni",
+    "specialty": "Intensive Care Unit",
+    "location": "Ikorodu, LA",
+    "hospital": "New Gate Hospital, LA",
+    "rating": "5.0",
+    "experience": "6yrs",
+    "patients": "200+",
+    "reviews": "20+",
+    "about": "Healthcare should be simple, transparent, and accessible to everyone. I believe technology can transform how we experience healthcare. My mission is to make it easier for you to connect with the care you deserve—on your terms.",
+    "skills": [
+      "Patient Assessment & Management",
+      "Critical Procedures",
+      "Trauma Care",
+      "Post-Surgical ICU Care",
+      "Cardiovascular Support",
+      "Respiratory Management"
+    ],
+    "working_hours": "7 AM - 6PM (excluding emergencies)",
+    "languages": ["English (UK)", "Yoruba"],
+    "price": "8k/hr",
+    "consultation_type": "Virtual/Onsite",
+    "img": "/dr_mimi_stephanie.png"
+  },
+  {
+    "name": "Dr. Ifeanyi Charles",
+    "specialty": "Pediatrics",
+    "location": "Umuahia, AB",
+    "hospital": "City Medical Centre, AB",
+    "rating": "4.92",
+    "experience": "15yrs",
+    "patients": "500+",
+    "reviews": "50+",
+    "about": "I am passionate about children's health, ensuring they receive the best medical care. I prioritize personalized treatment and parental guidance.",
+    "skills": [
+      "Neonatal Care",
+      "Child Nutrition",
+      "Immunization Programs",
+      "Developmental Screening"
+    ],
+    "working_hours": "8 AM - 5PM",
+    "languages": ["English (US)", "Igbo"],
+    "price": "10k/hr",
+    "consultation_type": "Onsite Only",
+    "img": "/dr_oluwaseyi.png"
+  },
+  {
+    "name": "Dr. Leye Mofeoluwa",
+    "specialty": "Cardiology",
+    "location": "Ogun, AB",
+    "hospital": "Aminu Kano Teaching Hospital, KN",
+    "rating": "4.8",
+    "experience": "10yrs",
+    "patients": "400+",
+    "reviews": "45+",
+    "about": "Dedicated to providing excellent cardiovascular care with a patient-centered approach.",
+    "skills": [
+      "Heart Disease Management",
+      "ECG Interpretation",
+      "Hypertension Treatment"
+    ],
+    "working_hours": "9 AM - 4PM",
+    "languages": ["English", "Hausa"],
+    "price": "12k/hr",
+    "consultation_type": "Virtual/Onsite",
+    "img": "/dr_leye_mofeoluwa.png"
+  },
+  {
+    "name": "Dr. Yusuf Ayomide",
+    "specialty": "Orthopedics",
+    "location": "Ibadan, OY",
+    "hospital": "UCH Ibadan, OY",
+    "rating": "4.7",
+    "experience": "12yrs",
+    "patients": "350+",
+    "reviews": "40+",
+    "about": "Committed to restoring mobility and improving quality of life for orthopedic patients.",
+    "skills": [
+      "Joint Replacement",
+      "Fracture Treatment",
+      "Sports Injuries"
+    ],
+    "working_hours": "8 AM - 3PM",
+    "languages": ["English", "Yoruba"],
+    "price": "15k/hr",
+    "consultation_type": "Onsite Only",
+    "img": "/dr_yusuf_ayomide.png"
+  },
+  {
+    "name": "Dr. Sylvia Koko",
+    "specialty": "Obstetrics & Gynecology",
+    "location": "Enugu, EN",
+    "hospital": "UNTH, EN",
+    "rating": "4.9",
+    "experience": "9yrs",
+    "patients": "300+",
+    "reviews": "35+",
+    "about": "Passionate about women's health, ensuring safe deliveries and comprehensive maternal care.",
+    "skills": [
+      "Prenatal Care",
+      "High-Risk Pregnancies",
+      "Fertility Counseling"
+    ],
+    "working_hours": "9 AM - 5PM",
+    "languages": ["English", "Igbo"],
+    "price": "9k/hr",
+    "consultation_type": "Virtual/Onsite",
+    "img": "/dr_sylvia_koko.png"
+  }
+]
